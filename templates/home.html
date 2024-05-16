@@ -141,21 +141,19 @@
         </div>
     </div>
 
-    <!-- <div style="margin: 0px 20px 0px 20px;background-color: rgb(0, 0, 0, 0.7);color: #FFFFFF; padding-bottom: 20px;">
+    <div style="margin: 0px 20px 0px 20px;background-color: rgb(0, 0, 0, 0.7);color: #FFFFFF; padding-bottom: 20px;">
         <div class="row text-center" style="margin-top: 30px;">
             <h1>5-Day Forecast</h1>
         </div>
         <div class="row text-center" style="margin-top: 20px;">
-            {% for day in forecast_data %}
+            {% for idx in range(forecast_dates|length) %}
             <div class="col">
-                <p>Date: {{ day['date'] }}</p>
-                <p>Avg Temp: {{ day['day']['avgtemp_c'] }}°C / {{ day['day']['avgtemp_f'] }}°F</p>
-                <p>Condition: {{ day['day']['condition']['text'] }}</p>
-                <img src="{{ day['day']['condition']['icon'] }}">
+                <p>Date: {{ forecast_dates[idx] }}</p>
+                <p>Condition: {{ forecast_conditions[idx] }}</p>
             </div>
             {% endfor %}
         </div>
-    </div> -->
+    </div>
     
     {% endif %}
 
